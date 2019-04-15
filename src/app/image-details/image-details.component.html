@@ -1,0 +1,12 @@
+<mat-grid-list class="container" cols="10" rowHeight="3:1" gutterSize="0px">
+  <mat-grid-tile class="piclist" colspan="3" rowspan="1">
+    <div class="matgridtext">
+      <a href="http://localhost:8080/image/{{imageUpload.id}}">{{imageUpload.filename}}</a>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="piclist" colspan="5" rowspan="1">
+    <div class="matgridtext">
+      {{imageUpload.description}}
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

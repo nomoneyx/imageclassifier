@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  height: 100vh;
+}
+
+app-image-list {
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  background-color: white;
+  height: auto;
+}
+
+.gridcontainer {
+  height: 100%;
+  margin: 5px 0 5px 0;
+
+}
+
+.buttonbrowse {
+  float: left;
+  width: 10%
+}
+
+.buttonupload {
+  float: left;
+  width: 10%;
+}
+
+.filefield {
+  float: left;
+  width: 80%;
+  border-radius: 0;
+}
+
+.buttons {
+  width: 19%;
+}
+
+.btn, btn-square {
+  border-radius: 0;
+  margin: 0;
+}
+
+.buttoncontainer {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.image {
+  height: 100%;
+  margin: 5px 0 5px 0;
+}
+

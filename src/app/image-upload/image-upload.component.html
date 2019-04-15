@@ -1,0 +1,28 @@
+<body>
+<div class="container">
+  <mat-grid-list class="gridcontainer" cols="28" rowHeight="2:1" gutterSize="0px">
+    <mat-grid-tile class="piclist" colspan="28" rowspan="35">
+      <app-image-list></app-image-list>
+      <img class="image" alt="" [src]="previewImage" *ngIf="previewImage">
+    </mat-grid-tile>
+    <mat-grid-tile class="piclist" colspan="28" rowspan="3">
+      <label class="input-group-btn buttons buttoncontainer" >
+            <span class="btn btn-primary buttonbrowse" >
+                Browse&hellip; <input type="file" style="display: contents;" (change)="selectImage($event)" (click)="resetDisplay()">
+            </span>
+        <button class="btn btn-success buttonupload" type="button" [disabled]="!selectedImages" (click)="upload()">Upload</button>
+        <input type="text" class="form-control filefield"  [value]="fileName">
+      </label>
+    </mat-grid-tile>
+    <mat-grid-tile class="piclist" colspan="28" rowspan="1">
+      <span class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+           aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+        {{progress.percentage}}%
+      </span>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+</body>
+
+
+
