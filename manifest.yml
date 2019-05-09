@@ -1,0 +1,6 @@
+---
+applications:
+  - name: final-client
+    random-route: true
+    memory: 250M
+    buildpack: https://github.com/cloudfoundry/staticfile-buildpack
