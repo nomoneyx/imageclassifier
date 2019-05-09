@@ -1,0 +1,37 @@
+<!--<div class="progressResult" [ngSwitch]="switchDiv">-->
+  <!--<div class="classifierResult" *ngIf='!showProgress'>-->
+    <!--{{classifierResult}}-->
+  <!--</div>-->
+  <!--<div>-->
+    <!--<div class="ballone balls" *ngIf='showProgress'></div>-->
+    <!--<div class="balltwo balls" *ngIf='showProgress'></div>-->
+    <!--<div class="ballthree balls" *ngIf='showProgress'></div>-->
+    <!--<div class="ballfour balls" *ngIf='showProgress'></div>-->
+  <!--</div>-->
+<!--</div>-->
+<div class="progressResult" [ngSwitch]="switchDiv">
+  <div class="classifierResult" *ngSwitchCase="'result'" [@enterTrigger]="'fadeIn'">
+    {{classifierResult}}
+  </div>
+  <div class="ballone balls" *ngSwitchCase="'progress'"></div>
+  <div class="balltwo balls" *ngSwitchCase="'progress'"></div>
+  <div class="ballthree balls" *ngSwitchCase="'progress'"></div>
+  <div class="ballfour balls" *ngSwitchCase="'progress'"></div>
+</div>
+<div class="container">
+  <!--*ngIf='showProgress'>-->
+  <!--<span class="progress-bar progress-bar-info progress-bar-striped progress-bar-custom" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"-->
+  <!--aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">-->
+  <!--{{progress.percentage}}%-->
+  <!--</span>-->
+  <form class="form-inline formContainer">
+    <label for="file-upload" class="input-group-btn buttons">
+      <span class="btn btn-primary buttonbrowse" (click)="resetDisplay()">Browse&hellip;</span>
+    </label>
+    <input id="file-upload" type="file" style="display: contents" onclick="this.value = null" (change)="selectImage($event)"/>
+    <button class="btn btn-success buttonupload" type="button" [disabled]="!selectedImages" (click)="upload()">Upload</button>
+    <input type="text" class="form-control filefield"  [value]="fileName">
+    <button class="btn btn-info buttonFileList" *ngIf='showFileList' (click)='fileList(false)'>Hide Files</button>
+    <button class="btn btn-info buttonFileList" *ngIf='!showFileList' (click)='fileList(true)'>Show Files</button>
+  </form>
+</div>

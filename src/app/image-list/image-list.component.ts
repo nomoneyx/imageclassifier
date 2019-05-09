@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
 import {ImageTransferService} from '../image-transfer.service';
 
 @Component({
@@ -9,17 +8,15 @@ import {ImageTransferService} from '../image-transfer.service';
 })
 export class ImageListComponent implements OnInit {
   showImage = false;
-  imageUploads: Observable<string[]>;
+  imageUpload: Array<any>;
+  imageIndex: number;
 
-  constructor(private imageTransfer: ImageTransferService) { }
+  constructor(private imageTransfer: ImageTransferService) {
+    this.imageTransfer.showFileList$.subscribe(data => {this.showImage = data; });
+    this.imageTransfer.imageUploads$.subscribe(data => {this.imageUpload = data; });
+  }
 
   ngOnInit() {
-  }
-  showImages(enable: boolean) {
-    this.showImage = enable;
-    if (enable) {
-      this.imageUploads = this.imageTransfer.getAllImages();
-    }
   }
 
 }

@@ -1,0 +1,18 @@
+.header {
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*flex-direction: column;*/
+  text-align: center;
+  font-family: arial;
+  font-size: 8.5vh;
+  font-weight: bolder;
+  /*height: 100%;*/
+  border-bottom: solid 0.5vh #8E9B90;
+  background-color: #3B413C;
+  color: #8E9B90;
+  /*margin-bottom: 20px;*/
+}
+
+/*:host {*/
+  /*height: 60vh;*/
+/*}*/

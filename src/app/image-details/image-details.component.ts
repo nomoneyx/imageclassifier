@@ -6,7 +6,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./image-details.component.css']
 })
 export class ImageDetailsComponent implements OnInit {
-  @Input() imageUpload: string;
+  @Input() imageUpload;
+  @Input() imageIndex: number;
 
   constructor() { }
 

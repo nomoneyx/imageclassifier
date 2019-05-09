@@ -8,13 +8,21 @@ import { ImageDetailsComponent } from './image-details/image-details.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { MatProgressBarModule, MatProgressSpinnerModule, MatGridListModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { ControlsComponent } from './controls/controls.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageListComponent,
     ImageDetailsComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    ControlsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

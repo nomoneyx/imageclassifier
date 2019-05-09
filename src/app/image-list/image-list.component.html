@@ -1,12 +1,14 @@
-<button class="button btn-info" *ngIf='showImage' (click)='showImages(false)'>Hide Files</button>
-<button class="button btn-info" *ngIf='!showImage' (click)='showImages(true)'>Show Files</button>
+<!--<button class="button btn-info" *ngIf='showImage' (click)='showImages(false)'>Hide Files</button>-->
+<!--<button class="button btn-info" *ngIf='!showImage' (click)='showImages(true)'>Show Files</button>-->
 
-<div [hidden]="!showImage">
+<!--<div [hidden]="!showImage">-->
+<h2 class="listTitle">File Uploads</h2>
+<div class="container">
   <div class="panel panel-primary">
-    <div class="panel-heading">List of Images</div>
-    <div *ngFor="let image of imageUploads | async">
+    <div class="panel-heading"></div>
+    <div class="listContainer" *ngFor="let image of imageUpload; let i = index">
       <div class="panel-body">
-        <app-image-details class="gridcontainer" [imageUpload]='image'></app-image-details>
+        <app-image-details class="gridcontainer" [imageUpload]='image' [imageIndex]='i+1'></app-image-details>
       </div>
     </div>
   </div>

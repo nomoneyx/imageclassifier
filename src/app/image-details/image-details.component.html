@@ -1,12 +1,19 @@
-<mat-grid-list class="container" cols="10" rowHeight="3:1" gutterSize="0px">
-  <mat-grid-tile class="piclist" colspan="3" rowspan="1">
+<mat-grid-list class="container" cols="9" rowHeight="3:1" gutterSize="0px">
+  <mat-grid-tile colspan="1" rowspan="1">
     <div class="matgridtext">
-      <a href="http://localhost:8080/image/{{imageUpload.id}}">{{imageUpload.filename}}</a>
+      {{imageIndex}}
     </div>
   </mat-grid-tile>
-  <mat-grid-tile class="piclist" colspan="5" rowspan="1">
+  <!--<mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>-->
+  <mat-grid-tile class="piclist" colspan="4" rowspan="1">
+    <div class="matgridtext">
+      <a href="https://imageclassifierserver-funny-bandicoot.apps.pcf.pcfhost.com/image/{{imageUpload.id}}">{{imageUpload.filename}}</a>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile class="piclist" colspan="4" rowspan="1">
     <div class="matgridtext">
       {{imageUpload.description}}
     </div>
   </mat-grid-tile>
+  <!--<mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>-->
 </mat-grid-list>
